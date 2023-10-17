@@ -39,7 +39,7 @@ html(lang="en" data-status="local")
     //- include ../includes/popup.pug
     include ../includes/form-wrapper.pug
     include ../includes/mobile-callback-popup.pug
-    include ../includes/popup-thank.pug
+    
     // END POPUP MODAL
     // START MENU
     include ../includes/menu.pug
@@ -61,4 +61,7 @@ html(lang="en" data-status="local")
         // START FOOTER
       block footer
         // END FOOTER
+      block modal 
+        include ../includes/popup-thank.pug
+
     block scripts
