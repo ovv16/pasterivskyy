@@ -76,7 +76,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    line-height: 1.2;
+    font-size: 12px;
     gap: 12px;
+    color: var(--bgColor);
+    text-transform: uppercase;
     @media (any-hover: hover) {
       &:hover {
         .burger__close {
@@ -87,7 +91,7 @@
     }
     @media (max-width: 768px) {
       top: 20px;
-      right: 20px;
+      right: 0px;
       width: 160px;
       height: 60px;
       color: var(--mainColor);

@@ -233,11 +233,11 @@ document.body.addEventListener('click', function(evt) {
 });
 
 // кнопка певернутися назад
-const goBackButton = document.querySelector('[data-go-back-button]');
-goBackButton.addEventListener('click', function() {
-  window.history.back();
-  console.log('немає куди повертатись');
-});
+// const goBackButton = document.querySelector('[data-go-back-button]');
+// goBackButton.addEventListener('click', function() {
+//   window.history.back();
+//   console.log('немає куди повертатись');
+// });
 //========================================================================================================================================================
 
 // document.querySelector('[data-up-arrow]').style.visibility = 'hidden';
