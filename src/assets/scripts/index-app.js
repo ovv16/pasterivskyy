@@ -1,22 +1,28 @@
-import $ from "jquery";
+import $ from 'jquery';
 import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Swiper, { EffectFade, FreeMode, Navigation, Pagination, Thumbs, Autoplay, Mousewheel } from 'swiper';
-import Headroom from "headroom.js";
+import Swiper, {
+  EffectFade,
+  FreeMode,
+  Navigation,
+  Pagination,
+  Thumbs,
+  Autoplay,
+  Mousewheel,
+} from 'swiper';
+import Headroom from 'headroom.js';
 import { lenis } from './modules/scroll/leniscroll';
 import buttonHover from './modules/buttonHover';
 import splitToLinesAndFadeUp from './modules/effects/splitLinesAndFadeUp';
 import { gsap, ScrollTrigger } from 'gsap/all';
-import "current-device";
+import 'current-device';
 // import menu from './modules/menu';
 import './modules/form';
 import { useState } from './modules/helpers/helpers';
 import { sideSwitchArrow } from './modules/effects/sideSwitchArrow';
-import FormMonster from "../../pug/components/form/form";
-
+import FormMonster from '../../pug/components/form/form';
 
 // const scroller = lenis;
-
 
 Swiper.use([EffectFade, Navigation, Pagination, Thumbs, FreeMode, Autoplay, Mousewheel]);
 /** ******************************* */
@@ -25,13 +31,12 @@ Swiper.use([EffectFade, Navigation, Pagination, Thumbs, FreeMode, Autoplay, Mous
  */
 global.gsap = gsap;
 global.ScrollTrigger = ScrollTrigger;
-gsap.core.globals("ScrollTrigger", ScrollTrigger);
+gsap.core.globals('ScrollTrigger', ScrollTrigger);
 global.axios = axios;
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-var myElement = document.querySelector(".header");
+var myElement = document.querySelector('header');
 // construct an instance of Headroom, passing the element
 var headroom = new Headroom(myElement);
 headroom.init();
@@ -42,39 +47,42 @@ headroom.init();
 
 //========================================================================================================================================================
 // ovv
-// swiper main 
+// swiper main
 const swiperMain = new Swiper('.swiper-main', {
   loop: true,
   effect: 'fade',
   speed: 1500,
   autoplay: {
-    delay: 5000
+    delay: 5000,
   },
   pagination: {
-    el: ".pagination-main",
+    el: '.pagination-main',
     clickable: true,
-    renderBullet: function (index, className) {
-      return '<div class="' + className + '">' + '0' + (index + 1) + "</div>";
-    }
+    renderBullet: function(index, className) {
+      return '<div class="' + className + '">' + '0' + (index + 1) + '</div>';
+    },
   },
 });
 
 // count number
 function handleIntersection(entries, observer) {
-  entries.forEach((entry) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
       if (!entry.target.classList.contains('count-animation-done')) {
         entry.target.classList.add('count-animation-done');
         var $count = $(entry.target);
-        $count.prop('counter', 0).animate({
-          counter: $count.text()
-        }, {
-          duration: 4000,
-          easing: 'swing',
-          step: function (now) {
-            $count.text(Math.ceil(now));
-          }
-        });
+        $count.prop('counter', 0).animate(
+          {
+            counter: $count.text(),
+          },
+          {
+            duration: 4000,
+            easing: 'swing',
+            step: function(now) {
+              $count.text(Math.ceil(now));
+            },
+          },
+        );
         observer.unobserve(entry.target);
       }
     }
@@ -83,28 +91,28 @@ function handleIntersection(entries, observer) {
 const observer = new IntersectionObserver(handleIntersection, {
   root: null,
   rootMargin: '0px',
-  threshold: 0.5
+  threshold: 0.5,
 });
-document.querySelectorAll('.count').forEach(function (element) {
+document.querySelectorAll('.count').forEach(function(element) {
   observer.observe(element);
 });
 
 // footer button-up
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-up-arrow]');
   if (!target) return;
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
-  })
+  });
 });
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-arrow-down]');
   if (!target) return;
   window.scrollTo({
     top: window.innerHeight,
     behavior: 'smooth',
-  })
+  });
 });
 // map
 function initMap() {
@@ -112,7 +120,7 @@ function initMap() {
     lat: 49.42021665848833,
     lng: 32.05678587802557,
   };
-  const map = new google.maps.Map(document.getElementById("map"), {
+  const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
     center: myLatLng,
     mapId: '459fa72e257f56ad',
@@ -124,8 +132,8 @@ function initMap() {
   new google.maps.Marker({
     position: myLatLng,
     map,
-    title: "Pasterivskyy",
-    icon: "./assets/images/logo_pasterivskyy_map.svg"
+    title: 'Pasterivskyy',
+    icon: './assets/images/logo_pasterivskyy_map.svg',
   });
 }
 initMap();
@@ -161,23 +169,23 @@ enableBodyScroll();
 
 // меню
 export function menuInit() {
-  document.addEventListener("click", function (event) {
+  document.addEventListener('click', function(event) {
     const target = event.target;
     if (target.closest('[data-menu-open]')) {
-      document.documentElement.classList.add("menu-open");
+      document.documentElement.classList.add('menu-open');
       disableBodyScroll();
     } else if (target.closest('[data-menu-closet]')) {
-      document.documentElement.classList.remove("menu-open");
+      document.documentElement.classList.remove('menu-open');
       enableBodyScroll();
     }
   });
 }
 
 export function menuOpen() {
-  document.documentElement.classList.add("menu-open");
+  document.documentElement.classList.add('menu-open');
 }
 export function menuClose() {
-  document.documentElement.classList.remove("menu-open");
+  document.documentElement.classList.remove('menu-open');
 }
 menuInit();
 
@@ -186,7 +194,7 @@ menuInit();
 disableBodyScroll();
 
 // Скрываем прелоадер после полной загрузки всех ресурсов на странице
-window.addEventListener('load', function () {
+window.addEventListener('load', function() {
   const loaderWrap = document.querySelector('.loader-wrap');
   // loaderWrap.style.opacity = '0'; // Делаем его прозрачным
   setTimeout(() => {
@@ -197,13 +205,13 @@ window.addEventListener('load', function () {
 });
 
 // popup зворотній зв'язок
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-call-form]');
   if (!target) return;
   document.querySelector('[data-form-wrapper]').classList.add('active');
   disableBodyScroll();
 });
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-close-form]');
   if (!target) return;
   document.querySelector('[data-form-wrapper]').classList.remove('active');
@@ -211,13 +219,13 @@ document.body.addEventListener('click', function (evt) {
 });
 
 // popup зворотній зв'язок mob
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-call-mobile-callback]');
   if (!target) return;
   document.querySelector('[data-mobile-callback-popup]').classList.add('active');
   disableBodyScroll();
 });
-document.body.addEventListener('click', function (evt) {
+document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-close-mobile-callback]');
   if (!target) return;
   document.querySelector('[data-mobile-callback-popup]').classList.remove('active');
@@ -226,16 +234,11 @@ document.body.addEventListener('click', function (evt) {
 
 // кнопка певернутися назад
 const goBackButton = document.querySelector('[data-go-back-button]');
-goBackButton.addEventListener('click', function () {
+goBackButton.addEventListener('click', function() {
   window.history.back();
-  console.log("немає куди повертатись");
+  console.log('немає куди повертатись');
 });
 //========================================================================================================================================================
-
-
-
-
-
 
 // document.querySelector('[data-up-arrow]').style.visibility = 'hidden';
 
@@ -243,18 +246,9 @@ goBackButton.addEventListener('click', function () {
 //   document.querySelector('[data-up-arrow]').style.visibility  = window.scrollY > (document.body.scrollHeight * 0.5) ? '' : 'hidden';
 // })
 
-
-
-
 // menu();
 
-
-
-
 // splitToLinesAndFadeUp('section:not(.section-1) .text-style-h-1, section  .text-style-h-3');
-
-
-
 
 // function addIntersectionOnceWithCallback(el, cb = () => { }) {
 //   const image = el;
@@ -286,14 +280,11 @@ goBackButton.addEventListener('click', function () {
 // })
 // document.querySelectorAll('[data-lazy]').forEach(el => {
 
-
 //   addIntersectionOnceWithCallback(el, () => {
 //     const lazyElemt = el.querySelector('[data-href]');
 //     lazyElemt.setAttribute('href', lazyElemt.dataset.href);
 //   })
 // })
-
-
 
 // const gallerySwiper = new Swiper('.home-gallery__container', {
 //   // navigation: {
@@ -357,7 +348,6 @@ goBackButton.addEventListener('click', function () {
 //   });
 // }
 
-
 // const aboutSlider = new Swiper('[data-home-about-slider]', {
 //   navigation: {
 //     nextEl: '[data-home-about-slider-next]',
@@ -378,7 +368,6 @@ goBackButton.addEventListener('click', function () {
 //     },
 //   }
 // })
-
 
 // if (document.documentElement.classList.contains('mobile')) {
 
@@ -420,7 +409,6 @@ goBackButton.addEventListener('click', function () {
 //     scale: 1
 //   }, '<')
 
-
 // aboutSlider.on('activeIndexChange', ({ activeIndex, realIndex, ...data }) => {
 //   const img = data.slides[activeIndex].dataset.image;
 //   document.querySelector('.circle-screen__img').setAttribute('src', img);
@@ -444,8 +432,6 @@ goBackButton.addEventListener('click', function () {
 // })
 
 // splitToLinesAndFadeUp('.text-style-h-1');
-
-
 
 // function gridBlockSlider() {
 //   if (!document.documentElement.classList.contains('mobile')) return;
@@ -508,11 +494,8 @@ goBackButton.addEventListener('click', function () {
 //     }
 //   });
 
-
 //   document.querySelector('.genplan__svg-wrapper').scrollTo(window.innerHeight - window.innerWidth, 0);
 // }
-
-
 
 // genplanMobileLegendSlider();
 
@@ -581,10 +564,6 @@ goBackButton.addEventListener('click', function () {
 //     stagger: 0.2
 //   }, '<')
 
-
-
-
-
 // function mobileHomeNews() {
 //   if (!document.documentElement.classList.contains('mobile')) return;
 //   new Swiper('.home-news.swiper-container', {
@@ -594,7 +573,6 @@ goBackButton.addEventListener('click', function () {
 // }
 
 // mobileHomeNews();
-
 
 // document.querySelectorAll('.home-progress__video-button').forEach(el => {
 //   el.addEventListener('click', function (evt) {

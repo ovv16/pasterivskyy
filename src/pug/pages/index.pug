@@ -8,9 +8,9 @@ block meta
 block head
   link(rel='stylesheet' href="./assets/styles/main.min.css")
 block scripts
+  script(defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOyQooAgmO65K7PSjfcaLvevumuxVvOwM&callback=initMap&libraries=&v=weekly")
   script(defer src='./assets/scripts/vendors.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOyQooAgmO65K7PSjfcaLvevumuxVvOwM&callback=initMap&libraries=&v=weekly" async defer></script>
 block content
   section.main-section
     .swiper-main
