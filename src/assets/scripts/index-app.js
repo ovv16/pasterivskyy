@@ -1,15 +1,15 @@
 import $ from 'jquery';
 import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Swiper, {
-  EffectFade,
-  FreeMode,
-  Navigation,
-  Pagination,
-  Thumbs,
-  Autoplay,
-  Mousewheel,
-} from 'swiper';
+// import Swiper, {
+//   EffectFade,
+//   FreeMode,
+//   Navigation,
+//   Pagination,
+//   Thumbs,
+//   Autoplay,
+//   Mousewheel,
+// } from 'swiper';
 import Headroom from 'headroom.js';
 import { lenis } from './modules/scroll/leniscroll';
 import buttonHover from './modules/buttonHover';
@@ -26,7 +26,7 @@ import './modules/header/header';
 
 // const scroller = lenis;
 
-Swiper.use([EffectFade, Navigation, Pagination, Thumbs, FreeMode, Autoplay, Mousewheel]);
+// Swiper.use([EffectFade, Navigation, Pagination, Thumbs, FreeMode, Autoplay, Mousewheel]);
 /** ******************************* */
 /*
  * smooth scroll start
@@ -45,22 +45,6 @@ headroom.init();
 
 //========================================================================================================================================================
 // ovv
-// swiper main
-const swiperMain = new Swiper('.swiper-main', {
-  loop: true,
-  effect: 'fade',
-  speed: 1500,
-  autoplay: {
-    delay: 5000,
-  },
-  pagination: {
-    el: '.pagination-main',
-    clickable: true,
-    renderBullet: function(index, className) {
-      return '<div class="' + className + '">' + '0' + (index + 1) + '</div>';
-    },
-  },
-});
 
 // count number
 function handleIntersection(entries, observer) {

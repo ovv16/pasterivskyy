@@ -1,26 +1,28 @@
-function init() {
-  // eslint-disable-next-line no-undef
-  const slider = new Swiper('.swiper-container', {
-    loop: true,
-    navigation: {
-      nextEl: document.querySelector('[data-next]'),
-      prevEl: document.querySelector('[data-prev]'),
-    },
-    preloadImages: false,
-    lazy: true,
-    speed: 400,
-    watchSlidesVisibility: true,
-    on: {
-      init: (e) => {
-        document.querySelector('[data-total]').innerHTML = document.querySelectorAll('.slide').length - 2;
-        document.querySelector('[data-current]').innerHTML = e.activeIndex + 1;
-      },
-    },
-  });
+import Swiper, {
+  EffectFade,
+  FreeMode,
+  Navigation,
+  Pagination,
+  Thumbs,
+  Autoplay,
+  Mousewheel,
+} from 'swiper';
 
-  slider.on('activeIndexChange', (obj) => {
-    document.querySelector('[data-current]').innerHTML = obj.realIndex + 1;
-  });
-}
+Swiper.use([EffectFade, Navigation, Pagination, Thumbs, FreeMode, Autoplay, Mousewheel]);
 
-document.addEventListener('DOMContentLoaded', init);
+// swiper main
+const swiperMain = new Swiper('.swiper-main', {
+  loop: true,
+  effect: 'fade',
+  speed: 1500,
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: '.pagination-main',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<div class="' + className + '">' + '0' + (index + 1) + '</div>';
+    },
+  },
+});

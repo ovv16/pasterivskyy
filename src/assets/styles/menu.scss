@@ -43,6 +43,9 @@
       padding: 21px 21px 110px 21px;
       gap: 20px;
     }
+    @media (max-width: 520px) {
+      padding: 17px;
+    }
   }
   &__item {
     font-family: Craftwork Grotesk;
@@ -56,6 +59,12 @@
     }
     @media (max-width: 1330px) {
       font-size: 60px;
+    }
+    @media (max-width: 700px) {
+      font-size: 36px;
+    }
+    @media (max-width: 520px) {
+      font-size: 29px;
     }
   }
   &__link {
@@ -96,6 +105,13 @@
       height: 60px;
       color: var(--mainColor);
     }
+    @media (max-width: 520px) {
+      top: 0;
+      width: 66px;
+      & > :first-child {
+        display: none;
+      }
+    }
     .burger__close {
       width: 66px;
       height: 66px;
@@ -121,6 +137,9 @@
   display: flex;
   flex-direction: column;
   gap: 3px;
+  @media (max-width: 520px) {
+    margin: 3px;
+  }
   // .contact-body-menu__image
   &__image {
     flex: 0 1 50%;
@@ -129,7 +148,7 @@
       height: 100%;
       object-fit: cover;
     }
-    @media (max-width:520px ){
+    @media (max-width: 520px) {
       display: none;
     }
   }
