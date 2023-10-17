@@ -437,6 +437,19 @@
   background: #262a4080;
   display: flex;
   justify-content: flex-end;
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+  z-index: 102;
+  transition: all 0.6s;
+  transform: translateX(100%);
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0);
+    overflow-y: auto;
+    height: 100%;
+  }
 }
 .form-close {
   @media (max-width: 767.98px) {
@@ -446,11 +459,6 @@
   @media (max-width: 520px) {
     top: 0px;
     right: 0px;
-  }
-}
-.burger {
-  // .burger__close
-  &__close {
   }
 }
 .thank-block {
