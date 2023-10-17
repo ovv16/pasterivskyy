@@ -21,6 +21,8 @@ import './modules/form';
 import { useState } from './modules/helpers/helpers';
 import { sideSwitchArrow } from './modules/effects/sideSwitchArrow';
 import FormMonster from '../../pug/components/form/form';
+import './modules/footer/footer';
+import './modules/header/header';
 
 // const scroller = lenis;
 
