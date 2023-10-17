@@ -40,10 +40,6 @@ var myElement = document.querySelector('header');
 // construct an instance of Headroom, passing the element
 var headroom = new Headroom(myElement);
 headroom.init();
-// var myElement = document.querySelector(".header-white");
-// // construct an instance of Headroom, passing the element
-// var headroomWhite = new Headroom(myElement);
-// headroomWhite.init();
 
 //========================================================================================================================================================
 // ovv
