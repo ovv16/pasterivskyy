@@ -1,0 +1,30 @@
+extends ../layout/main
+	
+block meta
+	title= '404'
+	meta(name='description', content='')
+block head
+		link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+	script(src='./assets/scripts/index.bundle.js')
+
+block content
+	section.section-404
+		.section-404__container
+			.section-404__img
+				img(src="./assets/images/404/404.png")
+			.section-404__block
+				.section-404__titel 404
+				.section-404__text Упс, щось пішло не так...
+				.section-404__buttons
+					button.section-404__button.button.button_red(data-go-back-button) Повернутися назад
+					a.section-404__button.button(href="/") На головну
+
+block footer
+	footer.footer
+		include ../includes/footer.pug
+
+block header
+	header.header
+		include ../includes/header-white.pug
+

@@ -1,0 +1,97 @@
+
+extends ../layout/main
+block variable
+
+block meta
+  title= 'Пастерівський ЖК'
+  meta(name='description' content='')
+block head
+  link(rel='stylesheet' href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOyQooAgmO65K7PSjfcaLvevumuxVvOwM&callback=initMap&libraries=&v=weekly" async defer></script>
+block content
+  section.main-section
+    .swiper-main
+      .swiper-wrapper
+        .swiper-slide 
+          .swiper-slide__img 
+            img(src="./assets/images/home/home_main.jpg")
+        .swiper-slide 
+          .swiper-slide__img 
+            img(src="./assets/images/home/home_comfort_1.jpg")
+        .swiper-slide 
+          .swiper-slide__img 
+            img(src="./assets/images/home/home_main.jpg")
+        .swiper-slide 
+          .swiper-slide__img 
+            img(src="./assets/images/home/home_comfort_1.jpg")
+    .pagination-main
+    .main-section__block
+      h1.title.title_white Пастерівський — місце, де кожна дрібниця створена з думкою про комфорт і затишок
+      button.button(type="button") Про проєкт
+    button.button-main-down(type="button" data-arrow-down )
+      .arrow-down
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32" fill="none">
+          <path d="M1.5 21.1786L11.0294 30.5M11.0294 30.5L20.5588 21.1786M11.0294 30.5C11.0294 24.9762 11.0294 12.7548 11.0294 8.05952C11.0294 2.19048 17.0294 1.5 18.4412 1.5C19.5706 1.5 24.6176 1.5 28.5 1.5" stroke="#C8BFBC" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      span дізнатись більше
+  section.about-section.section
+    .about-section__image.section__image
+      img(src="./assets/images/home/Illustration_about.svg")
+    .about-section__block.section__block
+      .about-section__block-about.section__block-inner
+        h2.about-section__title.title Про проект
+        .about-section__text.section__text.text
+          p Кожен з нас мріє про місце, де душа відчуває гармонію, де кожна дрібниця створена з думкою про комфорт і затишок, де домівка стає справжньою оазою для відпочинку та наповнення енергією.
+          p «Пастерівський» втілює цю мрію в реальність. Тож якщо ви розглядаєте варіант покупки квартири в Черкасах — цей комплекс саме те, що ви шукаєте.
+        a.about-section__button.button.button_red Дізнатися більше
+  section.description-section
+    .description-section__image
+      img(src="./assets/images/home/home_haracter.jpg")
+      .description-section__block.description-block
+        .description-block__year 2027<span>рік</span>
+        .description-block__text Закінчення <br> будівництва
+    .description-section__container
+      .description-section__title.title 
+        h2 Характеристики комплексу
+      .description-section__list.description-list
+        .description-list__item
+          .description-list__amount 1,9<span>га</span> 
+          .description-list__text Загальна площа території
+        .description-list__item
+          .description-list__amount.count 648
+          .description-list__text Кількість квартир
+        .description-list__item
+          .description-list__amount.count 8
+          .description-list__text Кількість секцій
+        .description-list__item
+          .description-list__amount.count 130
+          .description-list__text Гаражні бокси
+        .description-list__item
+          .description-list__amount.count 9
+          .description-list__text Поверховість
+        .description-list__item
+          .description-list__amount.count 88
+          .description-list__text Паркомісць
+  include ../includes/choose-section.pug
+  section.building-section.section
+    .building-section__image.section__image
+      img(src="./assets/images/home/Illustration_building.svg")
+    .building-section__block.section__block
+      .building-section__block-inner.section__block-inner
+        h2.building-section__title.title Хід будівництва
+        .building-section__date.text 25 Вересень 2023
+        .block-inner__image
+          img(src="./assets/images/home/home_bud.jpg")
+        .building-section__text.section__text.text
+          p Після отримання всіх необхідних дозвільних документів, ми вже розпочали підготовчі роботи на місці майбутнього житлового комплексу.
+        a.building-section__button.button.button_red Більше звітів з будівництва
+
+    
+  include ../includes/contact-screen.pug
+block footer
+  include ../includes/footer.pug
+block header
+  include ../includes/header.pug

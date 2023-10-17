@@ -1,0 +1,175 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  overflow: auto;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 1s;
+  transform: translateX(100%);
+}
+.menu-open .menu {
+  visibility: visible;
+  pointer-events: all;
+  transform: translateX(0);
+}
+.menu-body {
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  gap: 3px;
+  @media (max-width: 864px) {
+    flex-direction: column;
+      height: auto;
+  }
+  // .menu-body__menu
+  &__menu {
+    flex: 0 1 66%;
+    min-height: 100%;
+    background: var(--bgColor) url('../images/menu/doodle_menu.svg') no-repeat 100% 0 / auto 100%;
+  }
+  // .menu-body__contact
+  &__contact {
+    flex: 0 1 34%;
+  }
+  &__list {
+    display: grid;
+    gap: 32px;
+    padding: 60px 40px;
+  }
+  &__item {
+    font-family: Craftwork Grotesk;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 0.9;
+    text-transform: uppercase;
+    @media (max-width: 1650px) {
+      font-size: 70px;
+    }
+    @media (max-width: 1330px) {
+      font-size: 60px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 50px;
+    }
+    @media (max-width: 540px) {
+      font-size: 36px;
+    }
+    @media (max-width: 470px) {
+      font-size: 24px;
+    }
+  }
+  &__link {
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--bgColorRed);
+      }
+    }
+  }
+  .action {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    width: 180px;
+    height: 100px;
+    z-index: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    @media (any-hover: hover){
+      &:hover{
+        .burger__close{
+          transition: all 0.3s;
+        background-color: var(--bgColorRed);
+        } 
+      }
+    }
+    @media (max-width: 768px) {
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+    }
+    .burger__close {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background-color: var(--mainColor);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 2px;
+      @media (max-width: 1366px) {
+        width: 56px;
+        height: 56px;
+      }
+      @media (max-width: 360px) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+}
+.contact-body-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  // .contact-body-menu__image
+  &__image {
+    flex: 1 1 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media (max-width: 864px) {
+      display: none;
+    }
+  }
+  // .contact-body-menu__contacts
+  &__contacts {
+    flex: 1 1 50%;
+    background-color: var(--bgColorRed);
+  }
+  // .contact-body-menu__list
+  &__list {
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: Craftwork Grotesk;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #fff;
+    @media (max-width: 864px) {
+      padding: 60px 40px;
+    }
+    @media (max-width: 540px) {
+      font-size: 16px;
+    }
+  }
+  // .contact-body-menu__item
+  &__item {
+    .no-pointer {
+      pointer-events: none;
+    }
+  }
+  // .contact-body-menu__link
+  &__link {
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--mainColor);
+      }
+    }
+  }
+}
