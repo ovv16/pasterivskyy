@@ -1,0 +1,206 @@
+.progress-header-section {
+  background-color: var(--bgColor);
+  // .progress-header-section__container
+  &__container {
+    margin: auto 40px;
+    @media (max-width: 1250px) {
+      margin: auto 24px;
+    }
+    @media (max-width: 520px) {
+      margin: auto 20px;
+    }
+  }
+  // .progress-header-section__title
+  &__title {
+    width: 50%;
+    color: var(--textColor);
+    padding: 60px 0;
+    @media (max-width: 1250px) {
+      width: 100%;
+      padding: 40px 0;
+    }
+    @media (max-width: 520px) {
+      padding: 20px 0;
+    }
+  }
+  &__title-bottom {
+    padding-left: 50%;
+    width: 100%;
+    @media (max-width: 1250px) {
+      padding-left: 0;
+    }
+  }
+  // .progress-header-section__block
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    @media (max-width: 1250px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .progress-header-section__item
+  &__item {
+    position: relative;
+    padding: 40px;
+    border: 1px solid var(--textWhite);
+    @media (max-width: 768px) {
+      padding: 24px;
+    }
+    @media (max-width: 520px) {
+      padding: 20px;
+    }
+  }
+  // .progress-header-section__number
+  &__number {
+    position: absolute;
+    font-size: 90px;
+    line-height: 0.9;
+    color: var(--bgColorRed);
+    @media (max-width: 1600px) {
+      font-size: 60px;
+    }
+    @media (max-width: 520px) {
+      font-size: 29px;
+    }
+  }
+  // .progress-header-section__inner
+  &__inner {
+  }
+}
+
+.inner-progress {
+  margin-left: 273px;
+  max-width: 445px;
+  width: auto;
+  @media (max-width: 1600px) {
+    margin-left: 150px;
+    max-width: 416px;
+  }
+  @media (max-width: 1250px) {
+    margin-left: 174px;
+    max-width: 100%;
+  }
+  @media (max-width: 520px) {
+    margin-left: 92px;
+  }
+  // .inner-progress__title
+  &__title {
+    margin-bottom: 20px;
+  }
+  // .inner-progress__text
+  &__text {
+    color: var(--textColor);
+    font-size: 20px;
+    line-height: 1.4;
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+    @media (max-width: 520px) {
+      font-size: 14px;
+    }
+  }
+}
+
+//========================================================================================================================================================
+.progress-section {
+  background-color: var(--bgColor);
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content, 1fr));
+    margin-bottom: 100px;
+  }
+  // .progress-section__article
+  &__article {
+  }
+}
+.progress-article {
+  padding: 60px 40px;
+  display: grid;
+  justify-content: center;
+  border: 1px solid var(--textWhite);
+  position: relative;
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  // .progress-article__block
+  &__block {
+    max-width: 600px;
+  }
+  // .progress-article__date
+  &__date {
+    margin-bottom: 12px;
+  }
+  // .progress-article__image
+  &__image {
+    margin-bottom: 12px;
+  }
+  // .progress-article__text
+  &__text {
+    margin-bottom: 40px;
+  }
+  // .progress-article__button
+  &__button {
+  }
+}
+
+.progress-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 100px;
+  // .progress-pagination__item
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 1.4;
+    color: var(--bgColorRed);
+    border-radius: 50%;
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--bgColorRed);
+        color: #fff;
+        svg {
+          path {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+    &.prev {
+    }
+    &.page {
+    }
+    &.active {
+      color: var(--textWhite);
+      background-color: var(--mainColor);
+    }
+    &.not-active {
+      opacity: 0.25;
+    }
+    &.block {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: transparent;
+          color: var(--bgColorRed);
+        }
+      }
+    }
+    &.next {
+    }
+  }
+}

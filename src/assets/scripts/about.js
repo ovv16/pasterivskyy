@@ -109,3 +109,36 @@ function initMap() {
 
 }
 initMap();
+
+// count number
+function handleIntersection(entries, observer) {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			if (!entry.target.classList.contains('count-animation-done')) {
+				entry.target.classList.add('count-animation-done');
+				var $count = $(entry.target);
+				$count.prop('counter', 0).animate(
+					{
+						counter: $count.text(),
+					},
+					{
+						duration: 4000,
+						easing: 'swing',
+						step: function (now) {
+							$count.text(Math.ceil(now));
+						},
+					},
+				);
+				observer.unobserve(entry.target);
+			}
+		}
+	});
+}
+const observer = new IntersectionObserver(handleIntersection, {
+	root: null,
+	rootMargin: '0px',
+	threshold: 0.5,
+});
+document.querySelectorAll('.count').forEach(function (element) {
+	observer.observe(element);
+});
