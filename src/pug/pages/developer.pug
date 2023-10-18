@@ -11,12 +11,12 @@ block variable
       //-   link: pagesLink[0].about
       //- }
     ]
-  
+
 block meta
   title= title_page
-  meta(name='description', content='')
+  meta(name='description' content='')
 block head
-    link(rel='stylesheet', href="./assets/styles/main.min.css")
+  link(rel='stylesheet' href="./assets/styles/main.min.css")
 block scripts
   script(defer src='./assets/scripts/vendors.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
@@ -27,7 +27,7 @@ block content
     .developer-section__container
       article.developer-section__article.developer-article
         .developer-article__left
-          h2.developer-article__title Проєкт ЖК Пастерівський реалізовується командою Черкаської філії будівельної компанії «АртПроектБуд», яка заслужено знаходиться серед лідерів у продажі квартир у новобудовах.
+          h2.developer-article__title.title-small Проєкт ЖК Пастерівський реалізовується командою Черкаської філії будівельної компанії «АртПроектБуд», яка заслужено знаходиться серед лідерів у продажі квартир у новобудовах.
         .developer-article__right
           .developer-article__block
             .developer-article__text.article-text-top Починаючи з 2016 року, ми завоювали довіру мешканців Черкас своїми новаторськими рішеннями у сфері будівництва, зокрема, створивши ЖК «Сімейний» та «Сімейний люкс», ЖК «Андорра», ЖК «Лагуна», ЖК «Рідний дім» та ЖК «Сіті парк».
@@ -38,7 +38,7 @@ block content
           img(src="./assets/images/developer/image_1.jpg")
         .developer-article__right
           .developer-article-block
-            h3.developer-article-block__title.developer-article__title Інноваційність
+            h3.developer-article-block__title.title-small Інноваційність
             .developer-article-block__text.developer-article__text
               p В умовах жорсткої конкуренції на ринку нерухомості Черкас, ми завжди намагаємося випереджати очікування наших клієнтів, пропонуючи їм інноваційні рішення. Перші та єдині на ринку Черкас ми ввели автономне газове опалення, яке дозволяє мешканцям регулювати тепло та підігрів води за своїм бажанням.
               p Крім цього, наша компанія створила концепцію «вдома все поруч», інтегруючи комерційні приміщення, такі як магазини, кав’ярні, салони краси та автомийки, безпосередньо в житлові комплекси, щоб життя наших мешканців було максимально комфортним.
@@ -47,7 +47,7 @@ block content
           img(src="./assets/images/developer/image_2.jpg")
         .developer-article__right
           .developer-article-block
-            h3.developer-article-block__title.developer-article__title Надійність
+            h3.developer-article-block__title.title-small Надійність
             .developer-article-block__text.developer-article__text
               p Ми завжди дотримуємося прозорості та законності в нашій справі, тому перш ніж почати будівництво, ми збираємо повний пакет дозвільних документів.
               p Особливо ми пишаємося тим, що всі наші будинки були збудовані точно в заявлені терміни, бо розуміємо, наскільки важливо для наших покупців отримувати ключі від своєї нової оселі саме в обумовлений час.
@@ -56,9 +56,79 @@ block content
           img(src="./assets/images/developer/image_3.jpg")
         .developer-article__right
           .developer-article-block
-            h3.developer-article-block__title.developer-article__title Наша команда й ресурси
+            h3.developer-article-block__title.title-small Наша команда й ресурси
             .developer-article-block__text.developer-article__text
               p Ми користуємося послугами найкращих бригад мулярів та монолітчиків. У нас є вся необхідна будівельна техніка, яка належить нам на правах власності, що гарантує стабільність та оперативність у роботі.
+  section.project-section
+    .project-section__container
+      h2.project-section__title.title Готові ПРОЄКТИ
+      .project-section__block.block-project
+        article.block-project__article
+          .block-project__container
+            .block-project__image.section__image
+              img(src="./assets/images/developer/project_1.jpg")
+            .block-project__block
+              .block-poject__inner
+                h3.block-project__title.title-small ЖК Сімейний
+                .block-project__adress м. Черкаси, вул. Гагаріна, 29
+                .block-project__text ЖК «Сімейний» розташувався в серці Придніпровського району Черкас. Фантастичний дванадцятиповерховий комплекс, який ділиться на чотири стильних секції та є справжнім бізнес-класом у світі комфорту. Територія ЖК має затишні зони відпочинку, зону барбекю — першу в черкаських ЖК, та оздоблені зелені клумби, які доповнюють красу прибудинкової території. Усе, що потрібно для комфортного життя, на відстані кроку: зупинка, магазини та інші побутові послуги, такі як аптеки, заклади харчування, спортивні клуби та медичні установи.
+                a.block-project__button.button Сайт забудовника
+        article.block-project__article
+          .block-project__container
+            .block-project__image.section__image
+              img(src="./assets/images/developer/project_2.jpg")
+            .block-project__block
+              .block-poject__inner
+                h3.block-project__title.title-small ЖК Сімейний люкс
+                .block-project__adress м. Черкаси, вул. Героїв Дніпра, 4
+                .block-project__text Чотири 12-поверхові будівлі, які втілюють елітність і комфорт у серці Черкас. Цей розкішний комплекс підіймає стандарти житла. Завдяки панорамним вікнам, кожен ранок та вечір перетворюється на насолоду видами Дніпра. Ви і ваша сім’я будете почуватися захищеними завдяки закритій території, а зони відпочинку та дитячі майданчики дозволять якісно провести час, не виходячи за межі комплексу.
+                a.block-project__button.button Сайт забудовника
+        article.block-project__article
+          .block-project__container
+            .block-project__image.section__image
+              img(src="./assets/images/developer/project_3.jpg")
+            .block-project__block
+              .block-poject__inner
+                h3.block-project__title.title-small ЖК Андорра
+                .block-project__adress м. Черкаси, вул. Смілянська, 122/3
+                .block-project__text Житловий комплекс «Андорра» — це унікальний проєкт, який гармонійно поєднує в собі сучасні архітектурні рішення, передові технології та соціально-направлену політику цін. Це відмінний вибір для тих, хто шукає однокімнатну квартиру в Черкасах або для молодої сім’ї, яка хоче купити 2-кімнатну квартиру, адже це сучасне європейське житло за доступною ціною. Ігрові і спортивні майданчики, зелені зони, якісні доріжки — усе безпечно та екологічно.
+                a.block-project__button.button Сайт забудовника
+        article.block-project__article
+          .block-project__container
+            .block-project__image.section__image
+              img(src="./assets/images/developer/project_4.jpg")
+            .block-project__block
+              .block-poject__inner
+                h3.block-project__title.title-small ЖК Лагуна
+                .block-project__adress м. Черкаси, вул. Героїв Дніпра, 6
+                .block-project__text Житловий комплекс «Лагуна» — це симбіоз вишуканої архітектури та комфорту біля Дніпра. Продумане до дрібниць планування, де технічні характеристики й домашній затишок на першому місці. Стильний, з авторським декором фасад, він вразить своєю сучасністю. Відкривайте панорами Дніпра та користуйтесь перевагами розвиненої інфраструктури поруч.
+                a.block-project__button.button Сайт забудовника
+  section.project-section.project-section__last
+    .project-section__container
+      h2.project-section__title.title У процесі будівництва
+      .project-section__block.block-project
+        article.block-project__article
+          .block-project__container
+            .block-project__image.section__image
+              img(src="./assets/images/developer/project_5.jpg")
+            .block-project__block
+              .block-poject__inner
+                h3.block-project__title.title-small ЖК Рідний дім
+                .block-project__adress м. Черкаси, вул. Б.Вишневецького, 101
+                .block-project__text Майбутній ЖК «Рідний Дім» уже привертає увагу тих, хто планує купити квартиру в Черкасах. Він розташувався в центрі, оточений зеленню. Ці затишні оселі є гарантією вашого майбутнього комфорту та добробуту. Віримо, що цей видатний ЖК стане ключем до вашого щасливого завтрашнього дня.
+                a.block-project__button.button Сайт забудовника
+        article.block-project__article
+          .block-project__container
+            .block-project__image.section__image
+              img(src="./assets/images/developer/project_6.jpg")
+            .block-project__block
+              .block-poject__inner
+                h3.block-project__title.title-small ЖК Сіті парк
+                .block-project__adress м. Черкаси, вул. Козацька, 17
+                .block-project__text Кожен житель комплексу «City Park» зможе щодня насолоджуватися мальовничими краєвидами, могутнім Дніпром та свіжим повітрям. Архітектори спроєктували декілька функціональних зон, баскетбольний майданчик, басейн, комфортну зовнішню інфраструктуру та підземний паркінг.
+                a.block-project__button.button Сайт забудовника
+
+
   include ../includes/choose-section.pug
 block footer
   include ../includes/footer.pug

@@ -128,7 +128,7 @@ window.addEventListener('load', function() {
     loaderWrap.style.display = 'none'; // Убираем его из DOM
     // Разблокировать прокрутку body
     enableBodyScroll();
-  }, 4000); // Время, через которое прелоудер исчезнет
+  }, 3000); // Время, через которое прелоудер исчезнет
 });
 
 // popup зворотній зв'язок
