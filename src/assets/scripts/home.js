@@ -15,6 +15,7 @@ const swiperMain = new Swiper('.swiper-main', {
   loop: true,
   effect: 'fade',
   speed: 1500,
+  slidesPerView: 3,
   autoplay: {
     delay: 5000,
   },
