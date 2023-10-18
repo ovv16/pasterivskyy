@@ -46,39 +46,6 @@ headroom.init();
 //========================================================================================================================================================
 // ovv
 
-// count number
-function handleIntersection(entries, observer) {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      if (!entry.target.classList.contains('count-animation-done')) {
-        entry.target.classList.add('count-animation-done');
-        var $count = $(entry.target);
-        $count.prop('counter', 0).animate(
-          {
-            counter: $count.text(),
-          },
-          {
-            duration: 4000,
-            easing: 'swing',
-            step: function(now) {
-              $count.text(Math.ceil(now));
-            },
-          },
-        );
-        observer.unobserve(entry.target);
-      }
-    }
-  });
-}
-const observer = new IntersectionObserver(handleIntersection, {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5,
-});
-document.querySelectorAll('.count').forEach(function(element) {
-  observer.observe(element);
-});
-
 // footer button-up
 document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-up-arrow]');
@@ -96,29 +63,7 @@ document.body.addEventListener('click', function(evt) {
     behavior: 'smooth',
   });
 });
-// map
-function initMap() {
-  const myLatLng = {
-    lat: 49.42021665848833,
-    lng: 32.05678587802557,
-  };
-  const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 16,
-    center: myLatLng,
-    mapId: '459fa72e257f56ad',
-    fullscreenControl: false,
-    zoomControl: false,
-    streetViewControl: false,
-    mapTypeControl: false,
-  });
-  new google.maps.Marker({
-    position: myLatLng,
-    map,
-    title: 'Pasterivskyy',
-    icon: './assets/images/logo_pasterivskyy_map.svg',
-  });
-}
-initMap();
+
 
 // Заблокировать прокрутку body
 function disableBodyScroll() {
@@ -145,9 +90,9 @@ function enableBodyScroll() {
 }
 
 // Заблокировать прокрутку body при открытии модального окна
-disableBodyScroll();
+// disableBodyScroll();
 // Разблокировать прокрутку body при закрытии модального окна
-enableBodyScroll();
+// enableBodyScroll();
 
 // меню
 export function menuInit() {

@@ -10,13 +10,18 @@ $fontSize: 14px;
   --bgColorRed: #d4584d;
 }
 
-
 .section {
   display: flex;
   width: 100%;
   background-color: var(--bgColor);
   @media (max-width: 1100px) {
     flex-direction: column-reverse;
+  }
+  &.section-reverse {
+    flex-direction: row-reverse;
+    @media (max-width: 1100px) {
+      flex-direction: column-reverse;
+    }
   }
   // .section__image
   &__image {
@@ -32,6 +37,9 @@ $fontSize: 14px;
     flex: 0 1 50%;
     min-height: 415px;
     position: relative;
+    @media (max-width: 1100px) {
+      min-height: auto;
+    }
   }
   // .section__block-inner
   &__block-inner {

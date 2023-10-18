@@ -2,15 +2,9 @@
 extends ../layout/main
 block variable
   -
-    var title_page = 'about'
+    var title_page = 'Про проект'
     var id_page = 'id-page-about'
     var class_page = 'class-page-about'
-    var breadcrumbsSubitem = [
-      {
-        label: 'About',
-        link: pagesLink[0].about
-      }
-    ]
   
 block meta
   title= title_page
@@ -18,13 +12,99 @@ block meta
 block head
     link(rel='stylesheet', href="./assets/styles/main.min.css")
 block scripts
+  script(defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOyQooAgmO65K7PSjfcaLvevumuxVvOwM&callback=initMap&libraries=&v=weekly")
   script(defer src='./assets/scripts/vendors.bundle.js')
   script(defer src='./assets/scripts/index.bundle.js')
   script(defer src='./assets/scripts/about.bundle.js')
 block content
-  h1 about
+  include ../includes/breadcrumbs.pug
+  section.mission-section.section
+    .mission-section__image.section__image
+      img(src="./assets/images/about/mission.svg")
+    .mission-section__block.section__block
+      .mission-section__block-about.section__block-inner
+        h2.mission-section__title.title Місія
+        .mission-section__text.section__text.text
+          p Ми не просто будуємо будинки, ми створюємо концепції, які втілюють уявлення про ідеальний простір для життя. У «Пастерівському» ми прагнемо, щоб кожен квадратний метр вашого дому був не просто функціональним, але й чудово підходив для ваших ідей, творчості та натхнення.
+  section.goal-section.section.section-reverse
+    .goal-section__image.section__image
+      img(src="./assets/images/about/goal.svg")
+    .goal-section__block.section__block
+      .goal-section__block-about.section__block-inner
+        h2.goal-section__title.title Мета
+        .goal-section__text.section__text.text
+          p Мета нашого комплексу — перетворити уявлення про те, що таке нерухомість у сучасному світі. Ми прагнемо до того, щоби «Пастерівський» став символом нового підходу до життя в місті, місцем, де кожна деталь відповідає потребам та бажанням її мешканців.
+  section.slogan-section.section
+    .slogan-section__image.section__image
+      img(src="./assets/images/about/slogan.svg")
+    .slogan-section__block.section__block
+      .slogan-section__block-about.section__block-inner
+        h2.slogan-section__title.title Слоган
+        .slogan-section__text.section__text.text
+          p Слоган «Місце щасливих подій» відображає нашу віру в те, що ЖК «Пастерівський» — це не звичайна міська новобудова в Черкасах, а місце, де кожний момент життя стає особливим.
+          p Місце, де народжуються спогади. Де діти вчаться їздити на велосипеді, де сім’ї святкують важливі події, а друзі проводять теплі вечори разом, розділяючи сміх та розповідаючи історії. Тут ви зможете насолоджуватися життям у повному його розмаїтті!
+  include ../includes/description-section.pug
+  section.benefits-section
+    h2.benefits-section__title.title ПЕРЕВАГИ КОМПЛЕКСУ
+    .benefits-section__list
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 01.
+          h3 Сервіс «Під ключ»
+        .benefits-item__text Від першої консультації до оформлення всіх документів — ми піклуємося про все
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 02.
+          h3 Висока якість
+        .benefits-item__text Уніфіковані технології будівництва та строгий контроль якості
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 03.
+          h3 Безпека
+        .benefits-item__text Нові будівлі оснащені укриттями у підземному паркінгу для забезпечення вашої безпеки
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 04.
+          h3 Репутація
+        .benefits-item__text 100 % виконання будівельних термінів
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 05.
+          h3 Лояльність
+        .benefits-item__text Ексклюзивні умови для постійних клієнтів та гнучкі форми оплати
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 06.
+          h3 Парковка
+        .benefits-item__text Наявність паркомісць для вашого автомобіля
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 07.
+          h3 Надійність
+        .benefits-item__text Ми присутні в 5 містах України, забезпечуючи підтримку та консультації на всіх етапах
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 08.
+          h3 Благоустрій та комфорт
+        .benefits-item__text Озеленені території, відпочинкові зони, зони для барбекю, спортивні майданчики з безпечним покриттям та інші ексклюзивні рішення
+      .benefits-section__item.benefits-item
+        .benefits-item__title 
+          span 09.
+          h3 Юридична підтримка
+        .benefits-item__text Надаємо допомогу в організації ОСББ та інших юридичних питаннях
+  section.infrastructure-section
+    .infrastructure-section__top
+      .infrastructure-section__title.title Інфраструктура
+      .infrastructure-section__image
+        img.infrastructure-image-pc(src="./assets/images/about/infrastructure-doodle.svg")
+        img.infrastructure-image-mob(src="./assets/images/about/infrastructure-doodle-mob.svg")
+    .infrastructure-section__map
+      <div id="infrastructure-map" class="map__body"></div>
+
+  include ../includes/choose-section.pug
+
 block footer
   include ../includes/footer.pug
 
 block header
-  include ../includes/header.pug
+  include ../includes/header-white.pug

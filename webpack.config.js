@@ -6,6 +6,7 @@ const config = {
   entry: {
     'immediate-loading': './src/assets/scripts/immediate-loading.js',
     notFound: './src/assets/scripts/notFound.js',
+    contacts: './src/assets/scripts/contacts.js',
     about: './src/assets/scripts/about.js',
     home: './src/assets/scripts/home.js',
     index: './src/assets/scripts/index-app.js',
