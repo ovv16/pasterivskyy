@@ -1,0 +1,67 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Забудовник'
+    var id_page = 'id-page-developer'
+    var class_page = 'class-page-developer'
+    var breadcrumbsSubitem = [
+      //- {
+      //-   label: 'About',
+      //-   link: pagesLink[0].about
+      //- }
+    ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/developer.bundle.js')
+block content
+  include ../includes/breadcrumbs.pug
+  section.developer-section
+    .developer-section__container
+      article.developer-section__article.developer-article
+        .developer-article__left
+          h2.developer-article__title Проєкт ЖК Пастерівський реалізовується командою Черкаської філії будівельної компанії «АртПроектБуд», яка заслужено знаходиться серед лідерів у продажі квартир у новобудовах.
+        .developer-article__right
+          .developer-article__block
+            .developer-article__text.article-text-top Починаючи з 2016 року, ми завоювали довіру мешканців Черкас своїми новаторськими рішеннями у сфері будівництва, зокрема, створивши ЖК «Сімейний» та «Сімейний люкс», ЖК «Андорра», ЖК «Лагуна», ЖК «Рідний дім» та ЖК «Сіті парк».
+            .developer-article__logo
+              img(src="./assets/images/developer/logo.svg")
+      article.developer-section__article.developer-article
+        .developer-article__left.section__image
+          img(src="./assets/images/developer/image_1.jpg")
+        .developer-article__right
+          .developer-article-block
+            h3.developer-article-block__title.developer-article__title Інноваційність
+            .developer-article-block__text.developer-article__text
+              p В умовах жорсткої конкуренції на ринку нерухомості Черкас, ми завжди намагаємося випереджати очікування наших клієнтів, пропонуючи їм інноваційні рішення. Перші та єдині на ринку Черкас ми ввели автономне газове опалення, яке дозволяє мешканцям регулювати тепло та підігрів води за своїм бажанням.
+              p Крім цього, наша компанія створила концепцію «вдома все поруч», інтегруючи комерційні приміщення, такі як магазини, кав’ярні, салони краси та автомийки, безпосередньо в житлові комплекси, щоб життя наших мешканців було максимально комфортним.
+      article.developer-section__article.developer-article.reverse
+        .developer-article__left.section__image
+          img(src="./assets/images/developer/image_2.jpg")
+        .developer-article__right
+          .developer-article-block
+            h3.developer-article-block__title.developer-article__title Надійність
+            .developer-article-block__text.developer-article__text
+              p Ми завжди дотримуємося прозорості та законності в нашій справі, тому перш ніж почати будівництво, ми збираємо повний пакет дозвільних документів.
+              p Особливо ми пишаємося тим, що всі наші будинки були збудовані точно в заявлені терміни, бо розуміємо, наскільки важливо для наших покупців отримувати ключі від своєї нової оселі саме в обумовлений час.
+      article.developer-section__article.developer-article
+        .developer-article__left.section__image
+          img(src="./assets/images/developer/image_3.jpg")
+        .developer-article__right
+          .developer-article-block
+            h3.developer-article-block__title.developer-article__title Наша команда й ресурси
+            .developer-article-block__text.developer-article__text
+              p Ми користуємося послугами найкращих бригад мулярів та монолітчиків. У нас є вся необхідна будівельна техніка, яка належить нам на правах власності, що гарантує стабільність та оперативність у роботі.
+  include ../includes/choose-section.pug
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header-white.pug

@@ -4,17 +4,12 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const config = {
   mode: process.argv.includes('--production') ? 'production' : 'development',
   entry: {
-    'immediate-loading': './src/assets/scripts/immediate-loading.js',
-    notFound: './src/assets/scripts/notFound.js',
     contacts: './src/assets/scripts/contacts.js',
     about: './src/assets/scripts/about.js',
     home: './src/assets/scripts/home.js',
     index: './src/assets/scripts/index-app.js',
-    project: './src/assets/scripts/project.js',
-    progress: './src/assets/scripts/progress.js',
     gallery: './src/assets/scripts/gallery.js',
-    news: './src/assets/scripts/news.js',
-    'single-news': './src/assets/scripts/single-news.js',
+    developer: './src/assets/scripts/developer.js',
   },
   output: {
     filename: '[name].bundle.js',
