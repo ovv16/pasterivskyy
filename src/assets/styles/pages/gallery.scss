@@ -22,6 +22,7 @@
 }
 .swiper-gallery {
   & .swiper-wrapper {
+    display: flex;
     height: 800px;
     // width: auto !important;
     @media (max-width: 1366px) {
@@ -75,5 +76,9 @@
   }
   // .swiper-navigation__arow-right
   &__arow-right {
+  }
+  .swiper-button-disabled {
+    opacity: 0.6;
+    pointer-events: none;
   }
 }

@@ -18,6 +18,4 @@ var swiper = new Swiper(".swiper-gallery", {
 		nextEl: ".swiper-navigation__arow-right",
 		prevEl: ".swiper-navigation__arow-left",
 	},
-	mousewheel: true,
-	keyboard: true,
 });
