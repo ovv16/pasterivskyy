@@ -22,9 +22,7 @@
 }
 .swiper-gallery {
   & .swiper-wrapper {
-    display: flex;
-    height: 800px;
-    // width: auto !important;
+    height: 90vh;
     @media (max-width: 1366px) {
       height: 559px;
     }
@@ -69,6 +67,10 @@
       &:hover {
         background-color: var(--bgColorRed);
       }
+    }
+    @media (max-width: 1366px) {
+      width: 56px;
+      height: 56px;
     }
   }
   // .swiper-navigation__arow-left

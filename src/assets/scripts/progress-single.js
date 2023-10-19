@@ -1,14 +1,11 @@
 import Swiper, { Navigation } from 'swiper';
 Swiper.use([Navigation]);
 
-var swiper = new Swiper('.swiper-gallery', {
+var swiper = new Swiper('.swiper-progress-single', {
   speed: 1500,
   slidesPerView: 'auto',
   spaceBetween: 14,
   breakpoints: {
-    768: {
-      slidesPerView: 1.5,
-    },
     1366: {
       spaceBetween: 20,
     },

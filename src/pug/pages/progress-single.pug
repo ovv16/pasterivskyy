@@ -26,14 +26,14 @@ block content
 
   section.progress-single-section
     .progress-single-section__container
-      .progress-single-section__button
+      a.progress-single-section__button(href="progress.html")
         .progress-single-section__button-arow
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M20 10H2.00031M2.00031 10L11.0002 18.9998M2.00031 10L11.0002 1.00016" stroke="#262A40" stroke-width="2"/>
           </svg>
-        .progress-single-section__button-text Назад
+        .progress-single-section__button-text.text Назад
       .progress-single-section__block.progress-single-block
-        .progress-single-block_text
+        .progress-single-block_text.text
           p На сьогодні вже введені в експлуатацію, приймають гостей та приносять власникам пасивний дохід перші два будинки апарт-готелю.
           ul Зараз тривають роботи над зведенням третього будинку:
             li Монолітний каркас вже залили на 80 відсотків.
@@ -42,9 +42,9 @@ block content
             li Сходові марші та майданчики залиті до рівня восьмого поверху.
             li В будинку розпочали влаштування металопластикових вікон.
           p Завдяки злагодженій та організованій роботі будівництво йде швидкими темпами, графік запланованих будівельних робіт суттєво випереджено.
-          section.gallery-section
-            .gallery-section__container
-              .swiper-gallery.swiper
+          .progress-single-gallery-section
+            .progress-single-gallery__container
+              .swiper-progress-single.swiper
                 .swiper-wrapper
                   .swiper-slide 
                     .swiper-slide__img 
@@ -59,16 +59,42 @@ block content
                     .swiper-slide__img 
                       img(src="./assets/images/progress-single/progress-single_4.jpg")
               .swiper-navigation
-                .swiper-navigation__arow.swiper-navigation__arow-left
+                .swiper-navigation__arow.swiper-navigation__arow-left.progress-single__arrow
                   <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
                     <path d="M16.6362 9L1.36377 9M1.36377 9L9 1.36377M1.36377 9L9 16.6362" stroke="white" stroke-width="1.5"/>
                   </svg>
-                .swiper-navigation__arow.swiper-navigation__arow-right
+                .swiper-navigation__arow.swiper-navigation__arow-right.progress-single__arrow
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d="M0 10L17.9997 10M17.9997 10L8.99984 1.00016M17.9997 10L8.99984 18.9998" stroke="white" stroke-width="1.5"/>
                   </svg>
-    
-
+          
+          p Відеозвіт з будівництва
+          .progress-single__video
+            img(src="./assets/images/progress-single/video.jpg")
+            .progress-single__video-button
+              <svg xmlns="http://www.w3.org/2000/svg" width="39" height="48" viewBox="0 0 39 48" fill="none">
+                <path d="M37.2864 22.304L3.06 0.912499C1.7279 0.0799387 0 1.03762 0 2.60849V45.3915C0 46.9624 1.7279 47.9201 3.06 47.0875L37.2864 25.696C38.5397 24.9127 38.5397 23.0873 37.2864 22.304Z" fill="#C8BFBC"/>
+              </svg>
+  section.last-progress-section
+    .last-progress-section__container
+      .last-progress-section__title.title Останні звіти
+    .last-progress-section__block
+      .progress-section__article.progress-article
+        a.progress-article__link(href="progress-single.html")
+        .progress-article__block
+          .progress-article__date.text 25 Вересень 2023
+          .progress-article__image.section__image
+            img(src="./assets/images/progress/progress_01.jpg")
+          .progress-article__text.text Після отримання всіх необхідних дозвільних документів, ми вже розпочали підготовчі роботи на місці майбутнього житлового комплексу.
+          a.progress-article__button.button.button_red(href="progress-single.html") ДИВИТИСЯ ЗВІТ
+      .progress-section__article.progress-article
+        a.progress-article__link(href="progress-single.html")
+        .progress-article__block
+          .progress-article__date.text 25 Вересень 2023
+          .progress-article__image.section__image
+            img(src="./assets/images/progress/progress_01.jpg")
+          .progress-article__text.text Після отримання всіх необхідних дозвільних документів, ми вже розпочали підготовчі роботи на місці майбутнього житлового комплексу.
+          a.progress-article__button.button.button_red(href="progress-single.html") ДИВИТИСЯ ЗВІТ
 
 block footer
   include ../includes/footer.pug
