@@ -4,12 +4,12 @@ Swiper.use([Navigation]);
 
 var swiper = new Swiper(".swiper-gallery", {
 	speed: 1500,
-	// slidesPerView: 1,
+	slidesPerView: 1,
 	spaceBetween: 14,
 	breakpoints: {
-		// 768: {
-		// 	slidesPerView: 1.5,
-		// },
+		768: {
+			slidesPerView: 1.5,
+		},
 		1366: {
 			spaceBetween: 20,
 		},

@@ -10,6 +10,8 @@ const config = {
     index: './src/assets/scripts/index-app.js',
     gallery: './src/assets/scripts/gallery.js',
     developer: './src/assets/scripts/developer.js',
+    progress: './src/assets/scripts/progress.js',
+    progressSingle: './src/assets/scripts/progress-single.js',
   },
   output: {
     filename: '[name].bundle.js',

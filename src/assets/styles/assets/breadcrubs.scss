@@ -37,6 +37,8 @@
   // .page-header__title
   &__title {
     margin-bottom: 12px;
+    position: relative;
+    z-index: 2;
     @media (max-width: 1366px) {
       margin-bottom: 8px;
     }
@@ -52,8 +54,12 @@
   letter-spacing: 0.4px;
   text-transform: uppercase;
   gap: 11px;
+  position: relative;
   z-index: 2;
   .breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
     // .breadcrumbs-item__link
     &__link {
     }

@@ -108,6 +108,12 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(min-content, 1fr));
     margin-bottom: 100px;
+    @media (max-width: 768px) {
+      grid-template-columns: minmax(min-content, 1fr);
+    }
+    @media (max-width: 520px){
+    margin-bottom: 60px;
+    }
   }
   // .progress-section__article
   &__article {
@@ -119,6 +125,9 @@
   justify-content: center;
   border: 1px solid var(--textWhite);
   position: relative;
+  @media (max-width: 768px) {
+    padding: 40px 24px;
+  }
   @media (any-hover: hover) {
     &:hover {
       background-color: #fff;
@@ -146,7 +155,11 @@
   // .progress-article__text
   &__text {
     margin-bottom: 40px;
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
   }
+
   // .progress-article__button
   &__button {
   }
@@ -158,6 +171,14 @@
   align-items: center;
   gap: 24px;
   padding-bottom: 100px;
+  @media (max-width: 768px){
+    gap: 20px;
+      
+  }
+  @media (max-width: 520px){
+    gap: 0;
+    margin-bottom: 60px;
+  }
   // .progress-pagination__item
   &__item {
     display: flex;
@@ -170,6 +191,16 @@
     color: var(--bgColorRed);
     border-radius: 50%;
     transition: all 0.3s;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      width: 56px;
+      height: 56px;
+    }
+    @media (max-width: 520px) {
+      font-size: 14px;
+      width: 48px;
+      height: 48px;
+    }
     @media (any-hover: hover) {
       &:hover {
         background-color: var(--bgColorRed);

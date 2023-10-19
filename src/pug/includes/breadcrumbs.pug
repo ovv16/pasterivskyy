@@ -5,13 +5,15 @@
     h1.title.page-header__title= title_page
     ul.breadcrumbs
       li.breadcrumbs-item
-        a(href="/").breadcrumbs-item__link Головна
+        a(href="index.html").breadcrumbs-item__link Головна
       <svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
         <circle cx="1.5" cy="2" r="1.5" fill="#C8BFBC"/>
       </svg>
       if breadcrumbsSubitem
         each v in breadcrumbsSubitem
           li.breadcrumbs-item
-            a(href="#").breadcrumbs-item__link= v.label
-            +svg('arrow')
+            a(href=v.link).breadcrumbs-item__link= v.label
+            <svg xmlns="http://www.w3.org/2000/svg" width="3" height="4" viewBox="0 0 3 4" fill="none">
+              <circle cx="1.5" cy="2" r="1.5" fill="#C8BFBC"/>
+            </svg>
       li.breadcrumbs-item__current--color.breadcrumbs-item= title_page

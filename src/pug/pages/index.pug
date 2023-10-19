@@ -24,17 +24,17 @@ block content
             img(src="./assets/images/home/home_main.jpg")
         .swiper-slide 
           .swiper-slide__img 
-            img(src="./assets/images/home/home_comfort_1.jpg")
+            img(src="./assets/images/home/home_main_2.jpg")
         .swiper-slide 
           .swiper-slide__img 
-            img(src="./assets/images/home/home_main.jpg")
-        .swiper-slide 
-          .swiper-slide__img 
-            img(src="./assets/images/home/home_comfort_1.jpg")
+            img(src="./assets/images/home/home_main_3.jpg")
+        //- .swiper-slide 
+        //-   .swiper-slide__img 
+        //-     img(src="./assets/images/home/home_comfort_1.jpg")
     .pagination-main
     .main-section__block
       h1.title.title_white Пастерівський — місце, де кожна дрібниця створена з думкою про комфорт і затишок
-      button.button(type="button") Про проєкт
+      a.button.button(href="about.html") Про проєкт
     button.button-main-down(type="button" data-arrow-down )
       .arrow-down
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32" fill="none">
@@ -50,7 +50,7 @@ block content
         .about-section__text.section__text.text
           p Кожен з нас мріє про місце, де душа відчуває гармонію, де кожна дрібниця створена з думкою про комфорт і затишок, де домівка стає справжньою оазою для відпочинку та наповнення енергією.
           p «Пастерівський» втілює цю мрію в реальність. Тож якщо ви розглядаєте варіант покупки квартири в Черкасах — цей комплекс саме те, що ви шукаєте.
-        a.about-section__button.button.button_red Дізнатися більше
+        a.about-section__button.button.button_red(href="about.html") Дізнатися більше
 
   include ../includes/description-section.pug
   include ../includes/choose-section.pug
@@ -65,7 +65,7 @@ block content
           img(src="./assets/images/home/home_bud.jpg")
         .building-section__text.section__text.text
           p Після отримання всіх необхідних дозвільних документів, ми вже розпочали підготовчі роботи на місці майбутнього житлового комплексу.
-        a.building-section__button.button.button_red Більше звітів з будівництва
+        a.building-section__button.button.button_red(href="progress.html") Більше звітів з будівництва
 
     
   include ../includes/contact-screen.pug

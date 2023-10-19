@@ -9,6 +9,7 @@
   visibility: hidden;
   pointer-events: none;
   transition: all 1s;
+  background-color: hsla(231, 25%, 20%, 0.7);
   transform: translateX(100%);
 }
 .menu-open .menu {
