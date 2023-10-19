@@ -165,6 +165,47 @@
   &__button {
   }
 }
+//========================================================================================================================================================
+// building
+.building-section {
+  // .building-section__image
+  &__image {
+  }
+  // .building-section__block
+  &__block {
+  }
+  // .building-section__block-inner
+  &__block-inner {
+    .block-inner__image {
+      width: 100%;
+      height: 314px;
+      @media (max-width: 1366px) {
+        height: 217px;
+      }
+      @media (max-width: 1100px) {
+        height: 377px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      margin-bottom: 12px;
+    }
+  }
+  // .building-section__title
+  &__title {
+    margin-bottom: 12px;
+  }
+  // .building-section__date
+  &__date {
+    color: var(--textColor);
+    margin-bottom: 12px;
+  }
+  // .building-section__text
+  &__text {
+  }
+}
 
 
 //========================================================================================================================================================
