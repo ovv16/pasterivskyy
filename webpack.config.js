@@ -12,6 +12,7 @@ const config = {
     developer: './src/assets/scripts/developer.js',
     progress: './src/assets/scripts/progress.js',
     progressSingle: './src/assets/scripts/progress-single.js',
+    notFound: './src/assets/scripts/not-found.js',
   },
   output: {
     filename: '[name].bundle.js',

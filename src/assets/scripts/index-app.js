@@ -1,5 +1,5 @@
-// import $ from 'jquery';
-// import axios from 'axios';
+import $ from 'jquery';
+import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
 // import Swiper, {
 //   EffectFade,
@@ -14,7 +14,7 @@ import Headroom from 'headroom.js';
 import { lenis } from './modules/scroll/leniscroll';
 // import buttonHover from './modules/buttonHover';
 // import splitToLinesAndFadeUp from './modules/effects/splitLinesAndFadeUp';
-// import { gsap, ScrollTrigger } from 'gsap/all';
+import { gsap, ScrollTrigger } from 'gsap/all';
 import 'current-device';
 // import menu from './modules/menu';
 import './modules/form';
@@ -31,12 +31,12 @@ const scroller = lenis;
 /*
  * smooth scroll start
  */
-// global.gsap = gsap;
-// global.ScrollTrigger = ScrollTrigger;
-// gsap.core.globals('ScrollTrigger', ScrollTrigger);
-// global.axios = axios;
+global.gsap = gsap;
+global.ScrollTrigger = ScrollTrigger;
+gsap.core.globals('ScrollTrigger', ScrollTrigger);
+global.axios = axios;
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 var myElement = document.querySelector('header');
 // construct an instance of Headroom, passing the element
@@ -123,7 +123,6 @@ disableBodyScroll();
 // Скрываем прелоадер после полной загрузки всех ресурсов на странице
 window.addEventListener('load', function() {
   const loaderWrap = document.querySelector('.loader-wrap');
-  // loaderWrap.style.opacity = '0'; // Делаем его прозрачным
   setTimeout(() => {
     loaderWrap.style.display = 'none'; // Убираем его из DOM
     // Разблокировать прокрутку body
@@ -159,12 +158,7 @@ document.body.addEventListener('click', function(evt) {
   enableBodyScroll();
 });
 
-// кнопка певернутися назад
-// const goBackButton = document.querySelector('[data-go-back-button]');
-// goBackButton.addEventListener('click', function() {
-//   window.history.back();
-//   console.log('немає куди повертатись');
-// });
+
 //========================================================================================================================================================
 
 // document.querySelector('[data-up-arrow]').style.visibility = 'hidden';
