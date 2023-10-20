@@ -124,8 +124,11 @@ menuInit();
 // Скрываем прелоадер после полной загрузки всех ресурсов на странице
 window.addEventListener('load', function() {
   const loaderWrap = document.querySelector('.loader-wrap');
+  lenis.stop()
+
   setTimeout(() => {
     loaderWrap.style.display = 'none'; // Убираем его из DOM
+    lenis.start()
     // Разблокировать прокрутку body
     // enableBodyScroll();
   }, 3000); // Время, через которое прелоудер исчезнет
