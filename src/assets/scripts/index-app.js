@@ -66,33 +66,34 @@ document.body.addEventListener('click', function(evt) {
 
 
 // Заблокировать прокрутку body
-function disableBodyScroll() {
-  const body = document.body;
-  const scrollY = window.scrollY;
+// function disableBodyScroll() {
+//   const body = document.body;
+//   const scrollY = window.scrollY;
 
-  body.style.position = 'fixed';
-  body.style.width = '100%';
-  body.style.top = `-${scrollY}px`;
-  body.style.overflow = 'hidden';
-}
+//   body.style.position = 'fixed';
+//   body.style.width = '100%';
+//   body.style.top = `-${scrollY}px`;
+//   body.style.overflow = 'hidden';
+// }
 
 // Разблокировать прокрутку body
-function enableBodyScroll() {
-  const body = document.body;
-  const scrollY = parseInt(body.style.top, 10);
+// function enableBodyScroll() {
+//   const body = document.body;
+//   const scrollY = parseInt(body.style.top, 10);
 
-  body.style.position = '';
-  body.style.width = '';
-  body.style.top = '';
-  body.style.overflow = '';
+//   body.style.position = '';
+//   body.style.width = '';
+//   body.style.top = '';
+//   body.style.overflow = '';
 
-  window.scrollTo(0, scrollY * -1);
-}
+//   window.scrollTo(0, scrollY * -1);
+// }
 
 // Заблокировать прокрутку body при открытии модального окна
 // disableBodyScroll();
 // Разблокировать прокрутку body при закрытии модального окна
 // enableBodyScroll();
+
 
 // меню
 export function menuInit() {
@@ -100,10 +101,10 @@ export function menuInit() {
     const target = event.target;
     if (target.closest('[data-menu-open]')) {
       document.documentElement.classList.add('menu-open');
-      disableBodyScroll();
+      // disableBodyScroll();
     } else if (target.closest('[data-menu-closet]')) {
       document.documentElement.classList.remove('menu-open');
-      enableBodyScroll();
+      // enableBodyScroll();
     }
   });
 }
@@ -118,7 +119,7 @@ menuInit();
 
 // прелоудер
 // Заблокировать прокрутку body
-disableBodyScroll();
+// disableBodyScroll();
 
 // Скрываем прелоадер после полной загрузки всех ресурсов на странице
 window.addEventListener('load', function() {
@@ -126,7 +127,7 @@ window.addEventListener('load', function() {
   setTimeout(() => {
     loaderWrap.style.display = 'none'; // Убираем его из DOM
     // Разблокировать прокрутку body
-    enableBodyScroll();
+    // enableBodyScroll();
   }, 3000); // Время, через которое прелоудер исчезнет
 });
 
@@ -135,13 +136,13 @@ document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-call-form]');
   if (!target) return;
   document.querySelector('[data-form-wrapper]').classList.add('active');
-  disableBodyScroll();
+  // disableBodyScroll();
 });
 document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-close-form]');
   if (!target) return;
   document.querySelector('[data-form-wrapper]').classList.remove('active');
-  enableBodyScroll();
+  // enableBodyScroll();
 });
 
 // popup зворотній зв'язок mob
@@ -149,13 +150,13 @@ document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-call-mobile-callback]');
   if (!target) return;
   document.querySelector('[data-mobile-callback-popup]').classList.add('active');
-  disableBodyScroll();
+  // disableBodyScroll();
 });
 document.body.addEventListener('click', function(evt) {
   const target = evt.target.closest('[data-close-mobile-callback]');
   if (!target) return;
   document.querySelector('[data-mobile-callback-popup]').classList.remove('active');
-  enableBodyScroll();
+  // enableBodyScroll();
 });
 
 
