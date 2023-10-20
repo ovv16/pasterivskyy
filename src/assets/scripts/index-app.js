@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import axios from 'axios';
+// import $ from 'jquery';
+// import axios from 'axios';
 // eslint-disable-next-line import/no-extraneous-dependencies
 // import Swiper, {
 //   EffectFade,
@@ -12,31 +12,31 @@ import axios from 'axios';
 // } from 'swiper';
 import Headroom from 'headroom.js';
 import { lenis } from './modules/scroll/leniscroll';
-import buttonHover from './modules/buttonHover';
-import splitToLinesAndFadeUp from './modules/effects/splitLinesAndFadeUp';
-import { gsap, ScrollTrigger } from 'gsap/all';
+// import buttonHover from './modules/buttonHover';
+// import splitToLinesAndFadeUp from './modules/effects/splitLinesAndFadeUp';
+// import { gsap, ScrollTrigger } from 'gsap/all';
 import 'current-device';
 // import menu from './modules/menu';
 import './modules/form';
-import { useState } from './modules/helpers/helpers';
-import { sideSwitchArrow } from './modules/effects/sideSwitchArrow';
-import FormMonster from '../../pug/components/form/form';
+// import { useState } from './modules/helpers/helpers';
+// import { sideSwitchArrow } from './modules/effects/sideSwitchArrow';
+// import FormMonster from '../../pug/components/form/form';
 import './modules/footer/footer';
 import './modules/header/header';
 
-// const scroller = lenis;
+const scroller = lenis;
 
 // Swiper.use([EffectFade, Navigation, Pagination, Thumbs, FreeMode, Autoplay, Mousewheel]);
 /** ******************************* */
 /*
  * smooth scroll start
  */
-global.gsap = gsap;
-global.ScrollTrigger = ScrollTrigger;
-gsap.core.globals('ScrollTrigger', ScrollTrigger);
-global.axios = axios;
+// global.gsap = gsap;
+// global.ScrollTrigger = ScrollTrigger;
+// gsap.core.globals('ScrollTrigger', ScrollTrigger);
+// global.axios = axios;
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 var myElement = document.querySelector('header');
 // construct an instance of Headroom, passing the element
