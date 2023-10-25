@@ -445,7 +445,7 @@
   z-index: 102;
   transition: all 0.6s;
   transform: translateX(100%);
-  &.active {
+  &.modal-open {
     opacity: 1;
     visibility: visible;
     transform: translate(0);
