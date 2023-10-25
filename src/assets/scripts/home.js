@@ -74,11 +74,13 @@ function initMap() {
     streetViewControl: false,
     mapTypeControl: false,
   });
+
   new google.maps.Marker({
     position: myLatLng,
     map,
     title: 'Pasterivskyy',
-    icon: './assets/images/logo_pasterivskyy_map.svg',
+    icon: 'http://pasterivskyy/wp-content/uploads/2023/10/logopin.png',
   });
 }
+
 initMap();

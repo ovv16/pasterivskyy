@@ -17,3 +17,42 @@ var swiper = new Swiper('.swiper-progress-single', {
   mousewheel: true,
   keyboard: true,
 });
+
+// кнопка певернутися назад
+const goBackButton = document.querySelector('[data-go-back-button]');
+goBackButton.addEventListener('click', function () {
+  window.history.back();
+});
+
+
+  // Функция для приостановки видео и отображения кнопки
+  function pauseVideo() {
+    if (video && !video.paused) {
+      video.pause();
+      videoButton.style.opacity = 1;
+      videoButton.style.visibility = "visible";
+    }
+  }
+
+  // Получаем элементы DOM
+  var video = document.getElementById("video");
+  var videoButton = document.querySelector(".progress-single__video-button");
+
+  // Проверяем наличие элементов
+  if (video && videoButton) {
+    // Обработчик клика на видео
+    video.addEventListener("click", pauseVideo);
+
+    // Обработчик клика на кнопку
+    videoButton.addEventListener("click", function () {
+      video.play();
+      videoButton.style.opacity = 0;
+      videoButton.style.visibility = "hidden";
+    });
+  }
+
+
+
+
+
+

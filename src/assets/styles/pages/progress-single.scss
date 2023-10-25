@@ -81,21 +81,24 @@
   @media (max-width: 520px) {
     padding: 0 0 0 60px;
   }
-  p {
+  &_text {
     color: var(--mainColor);
-    &:not(:last-child) {
+    & p {
+      color: var(--mainColor);
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    & ul {
       margin-bottom: 20px;
     }
+    & li {
+      list-style-type: disc;
+      margin-left: 20px;
+      padding-left: 0px;
+    }
   }
-  ul {
-    color: var(--mainColor);
-    margin-bottom: 20px;
-  }
-  li {
-    list-style-type: disc;
-    margin-left: 20px;
-    padding-left: 0px;
-  }
+
   // .progress-single-block_text
   &_text {
   }

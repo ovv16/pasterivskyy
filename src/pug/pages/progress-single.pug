@@ -26,7 +26,7 @@ block content
 
   section.progress-single-section
     .progress-single-section__container
-      a.progress-single-section__button(href="progress.html")
+      a.progress-single-section__button(data-go-back-button)
         .progress-single-section__button-arow
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M20 10H2.00031M2.00031 10L11.0002 18.9998M2.00031 10L11.0002 1.00016" stroke="#262A40" stroke-width="2"/>
@@ -70,7 +70,8 @@ block content
           
           p Відеозвіт з будівництва
           .progress-single__video
-            img(src="./assets/images/progress-single/video.jpg")
+            video(class="video" id="video" loop preload="auto" muted width="100%" height="100%" playsinline) 
+              <source src="/assets/images/progress-single/video.mp4" type="video/mp4">
             .progress-single__video-button
               <svg xmlns="http://www.w3.org/2000/svg" width="39" height="48" viewBox="0 0 39 48" fill="none">
                 <path d="M37.2864 22.304L3.06 0.912499C1.7279 0.0799387 0 1.03762 0 2.60849V45.3915C0 46.9624 1.7279 47.9201 3.06 47.0875L37.2864 25.696C38.5397 24.9127 38.5397 23.0873 37.2864 22.304Z" fill="#C8BFBC"/>

@@ -222,6 +222,7 @@
     }
     &.not-active {
       opacity: 0.25;
+      pointer-events: none;
     }
     &.block {
       @media (any-hover: hover) {

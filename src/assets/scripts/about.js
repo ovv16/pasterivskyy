@@ -17,7 +17,7 @@ function initMap() {
 	const places = [
 		{
 			position: myLatLng,
-			icon: './assets/images/about/map-pin/logo.svg',
+			icon: 'http://pasterivskyy/wp-content/uploads/2023/10/logopin.png',
 			info: '<div>ЖК Пастерівський</div>',
 		},
 		// {
