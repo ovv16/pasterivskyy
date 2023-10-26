@@ -439,16 +439,14 @@
   background: #262a4080;
   display: flex;
   justify-content: flex-end;
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
   overflow: hidden;
   z-index: 102;
   transition: all 0.6s;
-  transform: translateX(100%);
   &.modal-open {
     opacity: 1;
     visibility: visible;
-    transform: translate(0);
     overflow-y: auto;
     height: 100%;
   }
@@ -472,6 +470,15 @@
   justify-content: center;
   justify-items: center;
   gap: 20px;
+  transition: all 0.3s;
+  transform: translateX(100);
+  visibility: hidden;
+  opacity: 0;
+  .modal-open & {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
   @media (max-width: 767.98px) {
     margin: auto 24px;
     width: 100%;
